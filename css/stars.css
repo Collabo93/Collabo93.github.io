@@ -1,0 +1,107 @@
+:root {
+    --animation-duration: 1s;
+    --bezier: cubic-bezier(26, 26, 26, 1);
+    --trans-dur: 0.3s;
+    --star-size: 2rem;
+    --star-color-border: rgb(69, 73, 84);
+}
+
+.rating__wrapper.desktop.show {
+    opacity: 1;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}
+
+.rating__display {
+    font-weight: 500;
+    min-height: 1.25em;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.rating__stars {
+    display: flex;
+    padding-bottom: 0.375em;
+    position: relative;
+}
+
+.rating__star {
+    display: block;
+    overflow: visible;
+    pointer-events: none;
+    width: 2em;
+    height: 2em;
+}
+
+.rating__star-ring,
+.rating__star-fill,
+.rating__star-line,
+.rating__star-stroke {
+    -webkit-animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.rating__star-ring,
+.rating__star-fill,
+.rating__star-line {
+    stroke: var(--background-hero-left);
+}
+
+.rating__star-fill {
+    fill: var(--background-hero-left);
+    transform: scale(0);
+    transition: fill var(--trans-dur) var(--bezier), transform var(--trans-dur) var(--bezier);
+}
+
+.rating__star-line {
+    stroke-dasharray: 12 13;
+    stroke-dashoffset: -13;
+}
+
+.rating__star-stroke {
+    stroke: var(--star-color-border);
+    transition: stroke var(--trans-dur);
+}
+
+.rating__label {
+    cursor: pointer;
+    padding: 0.125em;
+    font-size: var(--star-size)
+}
+
+.rating__label:hover {
+    fill: var(--background-hero-left-t);
+}
+
+.rating__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.rating__input-1:hover~.rating__label:first-of-type .rating__star-stroke,
+.rating__input-2:hover~.rating__label:nth-of-type(-n + 2) .rating__star-stroke,
+.rating__input-3:hover~.rating__label:nth-of-type(-n + 3) .rating__star-stroke,
+.rating__input-4:hover~.rating__label:nth-of-type(-n + 4) .rating__star-stroke,
+.rating__input-5:hover~.rating__label:nth-of-type(-n + 5) .rating__star-stroke {
+    stroke: var(--background-hero-left);
+    transform: scale(1);
+}
+
+.rating__sr {
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}

@@ -1,0 +1,262 @@
+.carousell.left {
+    justify-content: start;
+    -webkit-animation: left var(--background-font-speed) linear forwards;
+    animation: left var(--background-font-speed) linear forwards;
+}
+
+.carousell.right {
+    justify-content: end;
+    -webkit-animation: right var(--background-font-speed) linear forwards;
+    animation: right var(--background-font-speed) linear forwards;
+}
+
+@-webkit-keyframes left {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes left {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@-webkit-keyframes right {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@keyframes right {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+/* Star Animation */
+.rating__input-1:checked~.rating__label:first-of-type .rating__star-ring,
+.rating__input-2:checked~.rating__label:nth-of-type(-n + 2) .rating__star-ring,
+.rating__input-3:checked~.rating__label:nth-of-type(-n + 3) .rating__star-ring,
+.rating__input-4:checked~.rating__label:nth-of-type(-n + 4) .rating__star-ring,
+.rating__input-5:checked~.rating__label:nth-of-type(-n + 5) .rating__star-ring {
+    -webkit-animation-name: starRing;
+    animation-name: starRing;
+}
+
+.rating__input-1:checked~.rating__label:first-of-type .rating__star-stroke,
+.rating__input-2:checked~.rating__label:nth-of-type(-n + 2) .rating__star-stroke,
+.rating__input-3:checked~.rating__label:nth-of-type(-n + 3) .rating__star-stroke,
+.rating__input-4:checked~.rating__label:nth-of-type(-n + 4) .rating__star-stroke,
+.rating__input-5:checked~.rating__label:nth-of-type(-n + 5) .rating__star-stroke {
+    -webkit-animation-name: starStroke;
+    animation-name: starStroke;
+}
+
+.rating__input-1:checked~.rating__label:first-of-type .rating__star-line,
+.rating__input-2:checked~.rating__label:nth-of-type(-n + 2) .rating__star-line,
+.rating__input-3:checked~.rating__label:nth-of-type(-n + 3) .rating__star-line,
+.rating__input-4:checked~.rating__label:nth-of-type(-n + 4) .rating__star-line,
+.rating__input-5:checked~.rating__label:nth-of-type(-n + 5) .rating__star-line {
+    -webkit-animation-name: starLine;
+    animation-name: starLine;
+}
+
+.rating__input-1:checked~.rating__label:first-of-type .rating__star-fill,
+.rating__input-2:checked~.rating__label:nth-of-type(-n + 2) .rating__star-fill,
+.rating__input-3:checked~.rating__label:nth-of-type(-n + 3) .rating__star-fill,
+.rating__input-4:checked~.rating__label:nth-of-type(-n + 4) .rating__star-fill,
+.rating__input-5:checked~.rating__label:nth-of-type(-n + 5) .rating__star-fill {
+    -webkit-animation-name: starFill;
+    animation-name: starFill;
+}
+
+@-webkit-keyframes starRing {
+
+    from,
+    20% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        r: 8px;
+        stroke-width: 16px;
+        transform: scale(0);
+    }
+
+    35% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 0.5;
+        r: 8px;
+        stroke-width: 16px;
+        transform: scale(1);
+    }
+
+    50%,
+    to {
+        opacity: 0;
+        r: 16px;
+        stroke-width: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes starRing {
+
+    from,
+    20% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        r: 8px;
+        stroke-width: 16px;
+        transform: scale(0);
+    }
+
+    35% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 0.5;
+        r: 8px;
+        stroke-width: 16px;
+        transform: scale(1);
+    }
+
+    50%,
+    to {
+        opacity: 0;
+        r: 16px;
+        stroke-width: 0;
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes starFill {
+
+    from,
+    40% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale(0);
+    }
+
+    60% {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes starFill {
+
+    from,
+    40% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale(0);
+    }
+
+    60% {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes starStroke {
+    from {
+        transform: scale(1);
+    }
+
+    20%,
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes starStroke {
+    from {
+        transform: scale(1);
+    }
+
+    20%,
+    to {
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes starLine {
+
+    from,
+    40% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        stroke-dasharray: 1 23;
+        stroke-dashoffset: 1;
+    }
+
+    60%,
+    to {
+        stroke-dasharray: 12 13;
+        stroke-dashoffset: -13;
+    }
+}
+
+@keyframes starLine {
+
+    from,
+    40% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        stroke-dasharray: 1 23;
+        stroke-dashoffset: 1;
+    }
+
+    60%,
+    to {
+        stroke-dasharray: 12 13;
+        stroke-dashoffset: -13;
+    }
+}
+
+@media (max-width: 992px) {
+    .rating__wrapper.desktop.show {
+        opacity: 0;
+    }
+
+    .rating__wrapper.mobile.show {
+        opacity: 1;
+    }
+}

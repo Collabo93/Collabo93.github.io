@@ -1,0 +1,63 @@
+@import url(./reset.css);
+@import url(./monserrat.css);
+@import url(./animations.css);
+@import url(./hero.css);
+@import url(./stars.css);
+
+:root {
+    --background-hero-left: rgb(26, 26, 26);
+    --background-hero-right: linear-gradient(to right, #dd5e89, #f7bb97);
+
+    --font-color: white;
+
+    --background-font-transtion: 0.4s;
+    --background-font-distance: 3rem;
+    --background-font-speed: 40s;
+    --background-font-color: rgba(255, 255, 255, 0.4);
+    --background-font-color-hover: rgba(255, 255, 255, 1);
+    --background-font-color-hide: rgba(255, 255, 255, 0.0);
+
+    --boundaries: 2rem;
+
+    /* we need this entry for main.js */
+    --breakpoint-mobile: 992px;
+}
+
+/* main */
+html {
+    font-family: 'Montserrat';
+}
+
+body {
+    background: var(--background-hero-left);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    height: 80px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    letter-spacing: 1.3px;
+    outline: none;
+    transition: all .1s ease-in-out;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+h1,
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+span {
+    font-weight: 600;
+}

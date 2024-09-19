@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Roulette</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+</head>
+
+<body>
+    <section id="hero">
+        <div id="hero--left">
+            <div id="cta">
+                <h1>Website Roulette</h1>
+                <p>Mit einer Auswahl aus <span id="link_count"></span> Links</p>
+                <button id="roulette">Roulette!</button>
+            </div>
+            <div class="url-pick mobile">
+                <h2 class="url-pick-string">google.de</h2>
+                <p>Roulettet <span class="count">3x</span> • Klicks <span class="clicks">1</span> • Rating <span class="avg_rating">4,6</span></p>
+                <div class="url-pick-icons"></div>
+                <button class="url-pick-button" href="blank">Zur Seite</button>
+            </div>
+            <div class="rating__wrapper mobile">
+                <h2>Wie war die besuchte Seite?</h2>
+                <form class="rating"></form>
+            </div>
+        </div>
+        <div id="hero--right">
+            <div class="url-pick desktop">
+                <h2 class="url-pick-string">google.de</h2>
+                <p>Roulettet <span class="count">3x</span> • Klicks <span class="clicks">1</span> • Rating <span class="avg_rating">4,6</span></p>
+                <div class="url-pick-icons"></div>
+                <button class="url-pick-button" href="blank">Zur Seite</button>
+            </div>
+            <div class="rating__wrapper desktop">
+                <h2>Wie war die besuchte Seite?</h2>
+                <form class="rating"></form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { roulette } from './js/main.js';
+        roulette();
+    </script>
+</body>
+
+</html>
