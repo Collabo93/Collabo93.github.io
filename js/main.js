@@ -333,7 +333,7 @@ export const roulette = () => {
     async function updateRating(e) {
         disableRadioButton(true);
 
-        const starNr = e.target.getAttribute('star');
+        const starNr = Number(e.target.getAttribute('star'));
         addRating(currULR, starNr);
 
         const labels = document.querySelectorAll('.rating__label');
