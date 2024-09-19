@@ -15,9 +15,9 @@ const getStats = async url => {
         doc = await getData(url);
 
         if (doc.exists()) {
-            data.roulette = doc.data().roulette;
-            data.clicks = doc.data().clicks;
-            data.rating = doc.data().rating;
+            data.roulette = doc.data().roulette ?? 0;
+            data.clicks = doc.data().clicks ?? 0;
+            data.rating = doc.data().rating ?? [];
         } else {
             data.roulette = 0;
             data.clicks = 0;
